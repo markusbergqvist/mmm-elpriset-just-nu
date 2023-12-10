@@ -56,10 +56,12 @@ module.exports = NodeHelper.create({
 
     convertData: function (raw_data) {
         const data_points = [];
+        let y;
         for (let i = 0; i < raw_data.length; i++) {
-            const y = (this.config.currency == "kr") ? raw_data[i].SEK_per_kWh : raw_data[i].EUR_per_kWh;
-            data_points.push({label: String(i%24), y: y});
+            y = (this.config.currency == "kr") ? raw_data[i].SEK_per_kWh : raw_data[i].EUR_per_kWh;
+            data_points.push({label: String((i%24 == 0) ? 24 : i%24), y: y});
         }
+        data_points.push({label: String(24), y: y}); //add one last point to display the last value in the stepped graph
         return data_points;
     },
     
