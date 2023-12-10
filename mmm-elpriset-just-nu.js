@@ -5,8 +5,8 @@ Module.register("mmm-elpriset-just-nu", {
     defaults: {
         currency: "kr", // can also be 'eur'
         area: "SE3", // can also be "SE1", "SE2" and "SE4"
-        updateInterval: 1000*60*1, //1 minute
-        title: "Elprisetjust.nu",
+        updateInterval: 1000*60*1, //1 minute. This is how often the current time indicator is updated
+        title: "Elprisetjustnu.se",
     },
     chart: undefined,
     chart_start_time: undefined,
