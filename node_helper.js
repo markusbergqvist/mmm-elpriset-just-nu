@@ -26,7 +26,8 @@ module.exports = NodeHelper.create({
     },
     
     update: async function () {
-        const res = await this.getData(moment(this.data_day_2[0]).add(1, "days"));
+        //try to fetch next days prices. According to the documentation it will be avalible not before 13:00 the day before
+        const res = await this.getData(moment().add(1, "days"));
         if (res != undefined) {
             this.data_day_1 = this.data_day_2;
             this.data_day_2 = res;
