@@ -1,6 +1,6 @@
 # mmm-elpriset-just-nu
 
-Magic mirror module for showing electricity spot prices in Sweden. The data source is https://www.elprisetjustnu.se. The exchange rate used for converting from EUR to SEK is collected from exchangeratesapi.io and may differ slightly from the rate used by Nordpool but the relatice change during a day is exact.
+Magic mirror module for showing electricity spot prices in Sweden. The data source is https://www.elprisetjustnu.se, a completely free api, no keys required. The exchange rate used for converting from EUR to SEK is collected from exchangeratesapi.io and may differ slightly from the rate used by Nordpool but the relative change during a day is exact.
 
 Config:
 - currency: "kr", // can also be 'eur'
