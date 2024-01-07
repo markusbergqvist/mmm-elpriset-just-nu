@@ -7,5 +7,6 @@ Config:
 - area: "SE3", // can also be "SE1", "SE2" and "SE4"
 - updateInterval: 1000\*60\*1, //1 minute. This is how often the current time indicator is updated. Change depending on your screen resolution.
 - title: "Elprisetjustnu.se" //prefix of the header
+- height: 250 //pixel height of chart
   
 ![elpriset_screenshot](https://github.com/markusbergqvist/mmm-elpriset-just-nu/assets/849217/04c3f600-1a4c-44a2-b213-4d5d6e5ffdd5)
