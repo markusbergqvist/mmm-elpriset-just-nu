@@ -7,6 +7,7 @@ Module.register("mmm-elpriset-just-nu", {
         area: "SE3", // can also be "SE1", "SE2" and "SE4"
         updateInterval: 1000*60*1, //1 minute. This is how often the current time indicator is updated
         title: "Elprisetjustnu.se",
+        height: 250,
     },
     chart: undefined,
     chart_start_time: undefined,
@@ -33,7 +34,7 @@ Module.register("mmm-elpriset-just-nu", {
         const chart = new CanvasJS.Chart(element, {
             theme: "dark1",
             backgroundColor: "",
-            height: 250,
+            height: this.config.height,
             title: {
                 fontFamily: "Roboto Condensed",
                 fontSize: 14,
