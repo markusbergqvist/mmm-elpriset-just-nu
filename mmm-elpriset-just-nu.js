@@ -10,8 +10,8 @@ Module.register("mmm-elpriset-just-nu", {
     },
     chart: undefined,
     chart_start_time: undefined,
-    data_day_1: [],
-    data_day_2: [],
+    data_day_1: undefined,
+    data_day_2: undefined,
     timeout_id: undefined,
     
     getScripts: function () {
@@ -97,6 +97,7 @@ Module.register("mmm-elpriset-just-nu", {
         
         try {
             const res = await fetch(url);
+            //TODO supress 404 log?
             return await res.json();
         } catch(error) {
             return undefined;
@@ -134,7 +135,7 @@ Module.register("mmm-elpriset-just-nu", {
     notificationReceived: async function (notification, payload) {
         if (notification === "MODULE_DOM_CREATED") {
             //initiate data
-            this.fetch_new_data();
+            await this.fetch_new_data();
 
             //start updating the time indicator
             setInterval(() => {this.update();}, this.config.updateInterval);
